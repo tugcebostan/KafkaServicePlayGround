@@ -94,11 +94,8 @@ Understand how Kafka distributes partitions among consumers in the same group an
 
 #### Architecture
 
-| Topic | Partition | Consumer Group A (`KafkaService`) | Consumer Group B (`KafkaService2`) |
-|---|---|---|---|
-| `use-case-2-topic` | Partition 0 | Consumer 1 | Consumer 1 |
-| `use-case-2-topic` | Partition 1 | Consumer 2 | Consumer 2 |
-| `use-case-2-topic` | Partition 2 | Consumer 3 | Consumer 3 |
+<img width="1049" height="274" alt="image" src="https://github.com/user-attachments/assets/c599ec92-da14-4dc2-867b-e64f28b87957" />
+
 
 *Note: This table shows an example assignment. Kafka determines the actual partition assignments.*
 
