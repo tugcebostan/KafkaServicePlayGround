@@ -7,8 +7,15 @@ Console.WriteLine("Kafka Producer");
 
 
 var kafkaService = new KafkaService();
-var topicName = "use-case-1-topic";
-await kafkaService.CreateTopicAsync(topicName);
-await kafkaService.SendSimpleMessageWithNullKey(topicName);
+#region SendSimpleMessageWithNullKey
+//var topicName = "use-case-1.1-topic";
+//await kafkaService.CreateTopicAsync(topicName);
+//await kafkaService.SendSimpleMessageWithNullKey(topicName);
+# endregion
 
+#region SendSimpleMessageWithIntKey
+var topicName2 = "use-case-2-topic";
+await kafkaService.CreateTopicAsync(topicName2);
+await kafkaService.SendSimpleMessageWithIntKey(topicName2);
+#endregion
 Console.WriteLine("Mesajlar gönderildi. Çıkmak için bir tuşa basın...");

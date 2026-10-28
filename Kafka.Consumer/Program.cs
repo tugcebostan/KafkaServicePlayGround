@@ -2,10 +2,19 @@
 using Kafka.Consumer;
 
 Console.WriteLine("Kafka Consumer");
-var topicName = "use-case-1-topic";
+
+
+#region SendSimpleMessageWithNullKey
+//var topicName = "use-case-1.1-topic";
+//var kafkaService = new KafkaService();
+//await kafkaService.ConsumeSimpleMessageWithNullKey(topicName);
+# endregion
+
+#region SendSimpleMessageWithIntKey
+var topicName2 = "use-case-2-topic";
 var kafkaService = new KafkaService();
 
-await kafkaService.ConsumeSimpleMessageWithNullKey(topicName);
+await kafkaService.ConsumeSimpleMessageWithIntKey(topicName2);
+#endregion
 
 Console.ReadLine();
-
